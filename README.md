@@ -2,6 +2,29 @@
 
 Automatically check whether the apps has new updates and send notification reminders.
 
+## Install
+
+``` shell
+# install rumps
+pip uninstall rumps
+git clone git@github.com:jaredks/rumps.git
+cd rumps
+python setup.py install
+
+# install other requirements
+pip install -r requirements.txt
+
+# generate app
+python setup.py py2app
+
+# move the app to the applications
+mv dist/Apps\ Update\ Reminder.app /Applications
+```
+
+## Sample
+
+![](sample.png)
+
 ## Solutions to errors
 
 **libpython.dylib not found error**
@@ -26,6 +49,7 @@ ErrorMessage:
 Solution:
 pip uninstall rumps
 git clone git@github.com:jaredks/rumps.git
+cd rumps
 python setup.py install
 
 Reference:
